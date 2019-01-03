@@ -11,6 +11,7 @@ RUN apt-get update \
      ca-certificates \
      curl \
      git \
+     gpg-agent \
      iputils-ping \
      iputils-tracepath \
      libicu-dev \
@@ -39,10 +40,6 @@ RUN curl -sSL https://github.com/fpco/cache-s3/releases/download/${CACHE_S3_VERS
  && cache-s3 --version
 
 # Install Docker Engine
-RUN ( apt-get update ) \
- && ( apt-get install -y --no-install-recommends gpg-agent ) \
- && ( apt-get clean ) \
- && ( rm -rf /var/lib/apt/lists/* )
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - \
  && add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
