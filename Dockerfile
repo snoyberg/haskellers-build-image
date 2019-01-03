@@ -10,6 +10,7 @@ RUN apt-get update \
      build-essential \
      ca-certificates \
      curl \
+     git \
      iputils-ping \
      iputils-tracepath \
      libicu-dev \
