@@ -12,6 +12,7 @@ RUN apt-get update \
      curl \
      iputils-ping \
      iputils-tracepath \
+     libicu-dev \
      libgmp-dev \
      libpq-dev \
      libpython-dev \
