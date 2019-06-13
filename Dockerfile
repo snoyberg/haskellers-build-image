@@ -29,7 +29,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 # Install latest version of Stack
-ARG STACK_VERSION=1.9.3
+ARG STACK_VERSION=2.1.1
 RUN curl -sSL https://github.com/commercialhaskell/stack/releases/download/v${STACK_VERSION}/stack-${STACK_VERSION}-linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C /usr/local/bin '*/stack'
 
 # Install latest version of cache-s3
